@@ -1,0 +1,51 @@
+
+## confirm
+补偿机制：重新发送消息到server
+producer ---> server: confirmListener
+
+
+## 消费失败
+补偿机制：重回队列自旋，人工补偿
+server ---> consumer ---> 是否消费: autoAck false、channel.basicAck、channel.basicNack
+
+
+
+## 一致性
+
+模拟一个交易系统：
+
+    1、生成订单、生成消息(减库存)
+    2、订单、消息持久化(原子性操作)
+    3、发送消息（更新库存)
+    4、消费消息(减库存)
+
+问题分析：
+1、订单系统完成。
+2、涉及到两个数据库的原子操作，如果失败了：提醒用户重新下单
+3、发送消息到mq-server，confirmListener会监听到是否成功发送到server。消息发送失败更改消息状态，交给定时任务
+4、消费消息包括"减库存"和"手动ack"。"减库存"失败: nack更改消息状态交给定时任务。"手动ack"失败：
+
+消费成功ack失败问题：
+消费时==减少订单==数据库操作
+
+setnx(订单id):
+    成功: 数据库操作
+    失败：删除redis"订单id_key"，更改消息状态，交给定时任务
+channel.basicAck();
+
+这样就算ack失败也不影响库存了
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

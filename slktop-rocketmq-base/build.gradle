@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'slktop.mq'
+version 'v1'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.rocketmq:rocketmq-client:4.3.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

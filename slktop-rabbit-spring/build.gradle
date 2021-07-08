@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'slktop.mq'
+version 'v1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-amqp")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

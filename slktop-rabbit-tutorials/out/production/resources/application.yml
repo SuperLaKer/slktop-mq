@@ -1,0 +1,6 @@
+logging:
+  level:
+    org: Error
+spring:
+  profiles:
+    active: confirms
