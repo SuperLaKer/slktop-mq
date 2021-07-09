@@ -22,8 +22,10 @@ public class A_SyncProducer {
             byte[] messageBody = ("Hello RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET);
             // topic, tag, message
             Message msg = new Message("TopicTest","TagA", messageBody);
+            msg.setDelayTimeLevel(3);
+            // 等待结果
             SendResult sendResult = producer.send(msg);
-            System.out.printf("%s%n", sendResult);
+            System.out.printf("结果：%s%n", sendResult.getSendStatus());
         }
         // producer不在使用就关闭
         producer.shutdown();
