@@ -10,10 +10,13 @@
           <entry name="$GRADLE_USER_HOME$/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.16/6dc192c7f93ec1853f70d59d8a6dcf94eb42866/lombok-1.18.16.jar" />
         </processorPath>
         <module name="slktop-mq.slktop-rocketmq-base.main" />
+        <module name="slktop-mq.slktop-mq-transaction.slktop-mq-order.main" />
         <module name="slktop-mq.slktop-rabbit-spring.main" />
         <module name="slktop-mq.main" />
+        <module name="slktop-mq.slktop-constants.main" />
+        <module name="slktop-mq.slktop-mq-transaction.main" />
         <module name="slktop-mq.slktop-rabbit-tutorials.main" />
-        <module name="slktop-mq.slktop-rabbit-boot.main" />
+        <module name="slktop-mq.slktop-mq-transaction.slktop-mq-product.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />

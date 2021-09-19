@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'slktop.mq'
+version 'v1'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation('aa.my:slkenv:v1')
+    // 默认实现RabbitMQ
+
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-jdbc')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation("org.springframework.boot:spring-boot-starter-amqp")
+    implementation('com.baomidou:mybatis-plus-boot-starter:3.4.1') {
+        exclude group: "ch.qos.logback"
+    }
+    implementation 'mysql:mysql-connector-java:8.0.21'
+    implementation(project(':slktop-constants'))
+
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+
+
+    compile 'org.apache.commons:commons-pool2:2.7.0'
+}

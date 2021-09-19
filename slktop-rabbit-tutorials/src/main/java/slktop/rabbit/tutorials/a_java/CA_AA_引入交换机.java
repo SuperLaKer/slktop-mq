@@ -2,9 +2,9 @@ package slktop.rabbit.tutorials.a_java;
 
 /**
  * 交换机类型:
- * fanout广播，routing_key没用
- * direct模式相当于在exchange和queue之间加了把锁
- * topic模式在exchange和queue之间进行正则过滤
+ * fanout广播，所有的消费者都能消费消息
+ * direct: exchange和queue，只有和消息key完全匹配的queue才能接受消息
+ * topic: exchange和queue，消息key和queue的正则只要匹配就行
  * headers模式 todo
  *
  * 案例：

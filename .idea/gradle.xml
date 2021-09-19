@@ -5,15 +5,18 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="LOCAL" />
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../gradle-6.7" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/slktop-rabbit-boot" />
+            <option value="$PROJECT_DIR$/slktop-constants" />
+            <option value="$PROJECT_DIR$/slktop-mq-transaction" />
+            <option value="$PROJECT_DIR$/slktop-mq-transaction/slktop-mq-order" />
+            <option value="$PROJECT_DIR$/slktop-mq-transaction/slktop-mq-product" />
             <option value="$PROJECT_DIR$/slktop-rabbit-spring" />
             <option value="$PROJECT_DIR$/slktop-rabbit-tutorials" />
             <option value="$PROJECT_DIR$/slktop-rocketmq-base" />

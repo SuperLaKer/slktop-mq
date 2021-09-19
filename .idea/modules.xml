@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slktop-rabbit-boot/slktop-mq.slktop-rabbit-boot.iml" filepath="$PROJECT_DIR$/.idea/modules/slktop-rabbit-boot/slktop-mq.slktop-rabbit-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/slktop-mq.iml" filepath="$PROJECT_DIR$/.idea/slktop-mq.iml" />
     </modules>
   </component>
 </project>

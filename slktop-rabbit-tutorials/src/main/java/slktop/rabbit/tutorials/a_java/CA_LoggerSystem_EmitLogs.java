@@ -2,7 +2,7 @@ package slktop.rabbit.tutorials.a_java;
 
 import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
-import slktop.rabbit.tutorials.RabbitTools;
+import slktop.rabbit.tutorials.c_high.RabbitTools;
 
 import java.nio.charset.StandardCharsets;
 

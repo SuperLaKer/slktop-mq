@@ -11,5 +11,10 @@ rootProject.name = 'slktop-mq'
 include 'slktop-rabbit-tutorials'
 include 'slktop-rabbit-spring'
 include 'slktop-rocketmq-base'
-include 'slktop-rabbit-boot'
+
+include 'slktop-mq-transaction:slktop-mq-product'
+findProject(':slktop-mq-transaction:slktop-mq-product')?.name = 'slktop-mq-product'
+include 'slktop-mq-transaction:slktop-mq-order'
+findProject(':slktop-mq-transaction:slktop-mq-order')?.name = 'slktop-mq-order'
+include 'slktop-constants'
 

@@ -10,7 +10,7 @@ import com.rabbitmq.client.MessageProperties;
  * connect(ip:port) ---> channels.createQueue(name, 持久化等) = bufferChannel
  * bufferChannel.publish(message)
  *
- * workQueues: 消费者轮流消费消息
+ * workQueues: 工作队列模式，多个消费者只有一个可以消费
  */
 public class AA_HelloWorld_Send {
     public static void main(String[] args) throws Exception {

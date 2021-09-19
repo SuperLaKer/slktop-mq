@@ -1,0 +1,8 @@
+###
+POST http://localhost:30007/web/product/seckill
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "product_store": 100
+}

@@ -1,0 +1,19 @@
+### 下单
+PUT http://localhost:30006/web/order/
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "productIdNum": {
+    "1": 2
+  }
+}
+
+### 下单
+GET http://localhost:30006/web/order/test/1
+
+### 清除锁
+GET http://localhost:30006/web/order/clear
+
+### 检查锁
+GET http://localhost:30006/web/order/local/cache

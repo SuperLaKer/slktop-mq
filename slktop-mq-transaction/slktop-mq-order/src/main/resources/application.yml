@@ -1,0 +1,5 @@
+server:
+  port: 30006
+spring:
+  profiles:
+    active: rabbitmq, redis
